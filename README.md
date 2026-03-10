@@ -6,8 +6,11 @@ A humanoid bot capable of moving like a human being, using articulations to crea
 
 1. 20 Servos (power between 9g and 20 Kg)
 2. 70 mf jumper cables
-3. 1 esp-32
+3. 1 esp-32 (or Arduino Giga R1) --> will use esp-32 (cheaper)
 4. 15 metal plates, with holes for screws
+5. 2 curved metal plates
+6. 1 h-bridge
+7. 1 battery-pack
 
 # Time schedule
 
