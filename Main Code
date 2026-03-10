@@ -1,0 +1,187 @@
+#include <Servo.h>
+
+// joystick pins
+#define JOY_X A0
+#define JOY_Y A1
+
+// right leg pins
+Servo hip1_right;
+Servo hip2_right;
+Servo knee_right;
+Servo ankle_right;
+
+// left leg pins
+Servo hip1_left;
+Servo hip2_left;
+Servo knee_left;
+Servo ankle_left;
+
+// wights pins
+Servo weight_x;   // right / left
+Servo weight_z;   // forward / backward
+
+// global variables
+float currentRotation = 90;   // base angle(90)
+float deadZone = 0.15;
+
+bool stepSide = false; // variable used to alternate the current moving leg
+
+
+void setup()
+{
+  // right leg setup
+  hip1_right.attach(2);
+  hip2_right.attach(3);
+  knee_right.attach(4);
+  ankle_right.attach(5);
+
+  // left leg setup
+  hip1_left.attach(6);
+  hip2_left.attach(7);
+  knee_left.attach(8);
+  ankle_left.attach(9);
+
+  // weights setup
+  weight_x.attach(10);
+  weight_z.attach(11);
+
+  // set base servo rotations
+  SetNeutralPosition();
+}
+
+void loop()
+{
+  // read joystick axis
+  float x = ReadAxis(JOY_X);
+  float y = ReadAxis(JOY_Y);
+
+  // get joystick distance from center
+  float magnitude = sqrt(x * x + y * y);
+
+  // move
+  if (magnitude > deadZone)
+  {
+    Step(x, y);
+  }
+  // set to idle
+  else
+  {
+    SetNeutralPosition();
+  }
+}
+
+// read joystick values
+float ReadAxis(int pin)
+{
+  int raw = analogRead(pin);
+  return (raw - 512.0) / 512.0;
+}
+
+// get direction from joystick rotation
+float GetTargetAngle(float x, float y)
+{
+  float angle = atan2(x, y) * 180.0 / PI;
+
+  if (angle < 0)
+    angle += 360;
+
+  return angle;
+}
+
+// move forward
+void Step(float x, float y)
+{
+  float targetDirection = GetTargetAngle(x, y);
+
+  // convert from 0-360 angle to 45-135 (used from servos)
+  float servoTarget = map(targetDirection, 0, 360, 45, 135);
+
+  // get the angle missing from currentRotation
+  float rotationDelta = servoTarget - currentRotation;
+
+  // get hou much to turn with each step
+  float stepTurn = constrain(rotationDelta, -8, 8);
+
+  // set currentRotation to the current rotation
+  currentRotation += stepTurn;
+  currentRotation = constrain(currentRotation, 45, 135);
+
+  // decide wich leg to move with
+  if (!stepSide)
+    StepLeft();
+  else
+    StepRight();
+
+  // change next stepping leg
+  stepSide = !stepSide;
+}
+
+// left leg logic
+void StepLeft()
+{
+  // move weights to the right
+  weight_x.write(115);
+  delay(200);
+
+  // take left leg up
+  knee_left.write(60);
+  delay(200);
+
+  // rotate and step forward
+  hip1_left.write(currentRotation);
+  delay(200);
+
+  // take left leg down
+  knee_left.write(90);
+  delay(200);
+
+  // reset weights position
+  weight_x.write(90);
+  delay(200);
+}
+
+// right leg logic
+void StepRight()
+{
+  // move weights to the left 
+  weight_x.write(65);
+  delay(200);
+
+  // take right leg up
+  knee_right.write(60);
+  delay(200);
+
+  // rotate and step forward
+  hip1_right.write(currentRotation);
+  delay(200);
+
+  // take right leg down
+  knee_right.write(90);
+  delay(200);
+
+  // reset weights position
+  weight_x.write(90);
+  delay(200);
+}
+
+  // set to stable position
+void SetNeutralPosition()
+{
+  // set rught leg servos to center
+  hip1_right.write(90);
+  hip2_right.write(90);
+  knee_right.write(90);
+  ankle_right.write(90);
+
+  // set left leg servos to center
+  hip1_left.write(90);
+  hip2_left.write(90);
+  knee_left.write(90);
+  ankle_left.write(90);
+
+  // set weights servos to center
+  weight_x.write(90);
+  weight_z.write(90);
+
+  currentRotation = 90;
+}
