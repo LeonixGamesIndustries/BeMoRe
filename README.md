@@ -17,3 +17,6 @@ A humanoid bot capable of moving like a human being, using articulations to crea
 1. 2 weeks for completing the legs
 2. 2-3 weeks for completing arms
 3. 1 week to make it simulate his shutdown
+
+
+# picture
