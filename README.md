@@ -1,4 +1,4 @@
-[BATTERY.htm](https://github.com/user-attachments/files/26378433/BATTERY.htm)# BeMoRe
+# BeMoRe
 A humanoid bot capable of moving like a human being, using articulations to create the movement
 
 
@@ -26,15 +26,12 @@ Project --- Getting Materials --- Building --- Coding --- Testing
                    |
 
 # pictures
-![shopping](https://github.com/user-attachments/assets/7d2c5a4a-9251-46c6-be77-64f5fe6b20c0)
-
 ![download](https://github.com/user-attachments/assets/0ffa9837-6524-417a-9e13-68fe90448339)
 ![download](https://github.com/user-attachments/assets/d14bdaa8-079c-4c54-9fbf-bd0997de130e)
-
+![shopping](https://github.com/user-attachments/assets/7d2c5a4a-9251-46c6-be77-64f5fe6b20c0)
 ![download](https://github.com/user-attachments/assets/869908d8-f5f9-40bf-861e-f2e5434bf211)
 ![shopping](https://github.com/user-attachments/assets/2d08f836-a62b-4b86-bd12-50296e928dc7)
 ![download](https://github.com/user-attachments/assets/c004e8b4-f0b7-4cbc-a23b-372f355e6511)
-
-
 ![download](https://github.com/user-attachments/assets/c4e24245-e6c1-4f9e-a584-20b32cb3df1a)
+
 
