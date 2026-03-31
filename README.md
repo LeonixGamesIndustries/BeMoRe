@@ -20,7 +20,7 @@ A humanoid bot capable of moving like a human being, using articulations to crea
 
 # Milestones
 
--15 Mar             -25 Mar                  -5 Apr                       -15 Apr                      -25 Apr                   -5 Mag                      -15 Mag
+-15 Mar ----------- 25 Mar ----------- 5 Apr ----------- 15 Apr ----------- 25 Apr ----------- 5 Mag ----------- 15 Mag
 
 |-------------------|-------------------|-------------------|-------------------|-------------------|-------------------|
 
