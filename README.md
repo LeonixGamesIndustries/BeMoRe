@@ -27,5 +27,12 @@ Project --- Getting Materials --- Building --- Coding --- Testing
 
 # pictures
 
-https://github.com/user-attachments/assets/18adb33a-709d-43cc-a6cb-8b2ad97b0728
+1. [https://upload.wikimedia.org/wikipedia/commons/3/3d/Servo_motor.jpg](https://upload.wikimedia.org/wikipedia/commons/3/3d/Servo_motor.jpg)
+2. [https://upload.wikimedia.org/wikipedia/commons/6/6c/Arduino_Jumper_Wires.jpg](https://upload.wikimedia.org/wikipedia/commons/6/6c/Arduino_Jumper_Wires.jpg)
+3. [https://upload.wikimedia.org/wikipedia/commons/8/87/ESP32-DEVKITC.jpg](https://upload.wikimedia.org/wikipedia/commons/8/87/ESP32-DEVKITC.jpg)
+4. [https://upload.wikimedia.org/wikipedia/commons/0/0c/Metal_plate_with_holes.jpg](https://upload.wikimedia.org/wikipedia/commons/0/0c/Metal_plate_with_holes.jpg)
+5. [https://upload.wikimedia.org/wikipedia/commons/5/5f/Curved_metal_bracket.jpg](https://upload.wikimedia.org/wikipedia/commons/5/5f/Curved_metal_bracket.jpg)
+6. [https://upload.wikimedia.org/wikipedia/commons/6/6e/PCA9685_board.jpg](https://upload.wikimedia.org/wikipedia/commons/6/6e/PCA9685_board.jpg)
+7. [https://upload.wikimedia.org/wikipedia/commons/3/3f/Battery_pack_AA.jpg](https://upload.wikimedia.org/wikipedia/commons/3/3f/Battery_pack_AA.jpg)
+
 
