@@ -25,7 +25,7 @@ Project --- Getting Materials --- Building --- Coding --- Testing
                    ^
                    |
 
-# pictures
+# Pictures
 ![download](https://github.com/user-attachments/assets/0ffa9837-6524-417a-9e13-68fe90448339)
 ![download](https://github.com/user-attachments/assets/d14bdaa8-079c-4c54-9fbf-bd0997de130e)
 ![shopping](https://github.com/user-attachments/assets/7d2c5a4a-9251-46c6-be77-64f5fe6b20c0)
