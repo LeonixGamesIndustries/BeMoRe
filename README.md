@@ -1,4 +1,4 @@
-# BeMoRe
+[BATTERY.htm](https://github.com/user-attachments/files/26378433/BATTERY.htm)# BeMoRe
 A humanoid bot capable of moving like a human being, using articulations to create the movement
 
 
@@ -26,13 +26,15 @@ Project --- Getting Materials --- Building --- Coding --- Testing
                    |
 
 # pictures
+![shopping](https://github.com/user-attachments/assets/7d2c5a4a-9251-46c6-be77-64f5fe6b20c0)
 
-1. [https://upload.wikimedia.org/wikipedia/commons/3/3d/Servo_motor.jpg](https://upload.wikimedia.org/wikipedia/commons/3/3d/Servo_motor.jpg)
-2. [https://upload.wikimedia.org/wikipedia/commons/6/6c/Arduino_Jumper_Wires.jpg](https://upload.wikimedia.org/wikipedia/commons/6/6c/Arduino_Jumper_Wires.jpg)
-3. [https://upload.wikimedia.org/wikipedia/commons/8/87/ESP32-DEVKITC.jpg](https://upload.wikimedia.org/wikipedia/commons/8/87/ESP32-DEVKITC.jpg)
-4. [https://upload.wikimedia.org/wikipedia/commons/0/0c/Metal_plate_with_holes.jpg](https://upload.wikimedia.org/wikipedia/commons/0/0c/Metal_plate_with_holes.jpg)
-5. [https://upload.wikimedia.org/wikipedia/commons/5/5f/Curved_metal_bracket.jpg](https://upload.wikimedia.org/wikipedia/commons/5/5f/Curved_metal_bracket.jpg)
-6. [https://upload.wikimedia.org/wikipedia/commons/6/6e/PCA9685_board.jpg](https://upload.wikimedia.org/wikipedia/commons/6/6e/PCA9685_board.jpg)
-7. [https://upload.wikimedia.org/wikipedia/commons/3/3f/Battery_pack_AA.jpg](https://upload.wikimedia.org/wikipedia/commons/3/3f/Battery_pack_AA.jpg)
+![download](https://github.com/user-attachments/assets/0ffa9837-6524-417a-9e13-68fe90448339)
+![download](https://github.com/user-attachments/assets/d14bdaa8-079c-4c54-9fbf-bd0997de130e)
 
+![download](https://github.com/user-attachments/assets/869908d8-f5f9-40bf-861e-f2e5434bf211)
+![shopping](https://github.com/user-attachments/assets/2d08f836-a62b-4b86-bd12-50296e928dc7)
+![download](https://github.com/user-attachments/assets/c004e8b4-f0b7-4cbc-a23b-372f355e6511)
+
+
+![download](https://github.com/user-attachments/assets/c4e24245-e6c1-4f9e-a584-20b32cb3df1a)
 
