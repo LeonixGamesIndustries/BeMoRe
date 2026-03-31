@@ -37,17 +37,17 @@ Brancaglion = accesso a github, inizio progetto codice
 Gravina = accesso a github, ricerca componenti online
 Labate = accesso a github, ricerca peso componenti
 
-17 marzo 2026:
+- 17 marzo 2026:
 Brancaglion = sviluppo del codice gambe
 Gravina = sviluppo del codice gambe
 Labate = creazione di contenuti su github
 
-24 marzo 2026:
+- 24 marzo 2026:
 Brancaglion = sviluppo del codice gambe
 Gravina = sviluppo del codice gambe
 Labate = inserimento delle immagini su github 
 
-31 marzo 2026 (oggi):
+- 31 marzo 2026 (oggi):
 Brancaglion = carrello dei materiali
 Gravina = creazione di contenuti su github
 Labate = creazione della wiki su github
