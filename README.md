@@ -43,7 +43,7 @@ Project --- Getting Materials --- Building --- Coding --- Testing
 - Labate = creazione di contenuti su github
 
 24 marzo 2026:
-- Brancaglion = sviluppo del codice gambe
+- Brancaglion = ASSENTE
 - Gravina = sviluppo del codice gambe
 - Labate = inserimento delle immagini su github 
 
