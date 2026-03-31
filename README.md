@@ -27,30 +27,30 @@ Project --- Getting Materials --- Building --- Coding --- Testing
 
 # Journal
 
-- 3 marzo 2026:
-Brancaglion = idea del progetto 
-Gravina = ricerca immagini simili al progetto
-Labate = ASSENTE
+3 marzo 2026:
+- Brancaglion = idea del progetto 
+- Gravina = ricerca immagini simili al progetto
+- Labate = ASSENTE
 
-- 10 marzo 2026:
-Brancaglion = accesso a github, inizio progetto codice
-Gravina = accesso a github, ricerca componenti online
-Labate = accesso a github, ricerca peso componenti
+10 marzo 2026:
+- Brancaglion = accesso a github, inizio progetto codice
+- Gravina = accesso a github, ricerca componenti online
+- Labate = accesso a github, ricerca peso componenti
 
-- 17 marzo 2026:
-Brancaglion = sviluppo del codice gambe
-Gravina = sviluppo del codice gambe
-Labate = creazione di contenuti su github
+17 marzo 2026:
+- Brancaglion = sviluppo del codice gambe
+- Gravina = sviluppo del codice gambe
+- Labate = creazione di contenuti su github
 
-- 24 marzo 2026:
-Brancaglion = sviluppo del codice gambe
-Gravina = sviluppo del codice gambe
-Labate = inserimento delle immagini su github 
+24 marzo 2026:
+- Brancaglion = sviluppo del codice gambe
+- Gravina = sviluppo del codice gambe
+- Labate = inserimento delle immagini su github 
 
-- 31 marzo 2026 (oggi):
-Brancaglion = carrello dei materiali
-Gravina = creazione di contenuti su github
-Labate = creazione della wiki su github
+31 marzo 2026 (oggi):
+- Brancaglion = carrello dei materiali
+- Gravina = creazione di contenuti su github
+- Labate = creazione della wiki su github
 
 # Pictures
 ![download](https://github.com/user-attachments/assets/0ffa9837-6524-417a-9e13-68fe90448339)
