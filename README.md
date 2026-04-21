@@ -46,7 +46,7 @@ A humanoid bot capable of moving like a human being, using articulations to crea
 24 marzo 2026:
 - Brancaglion = ASSENTE
 - Gravina = sviluppo del codice gambe
-- Labate = inserimento delle immagini su github 
+- Labate = ricerca ed inserimento delle immagini su github 
 
 31 marzo 2026:
 - Brancaglion = carrello dei materiali
