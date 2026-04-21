@@ -48,12 +48,12 @@ A humanoid bot capable of moving like a human being, using articulations to crea
 - Gravina = sviluppo del codice gambe
 - Labate = inserimento delle immagini su github 
 
-31 marzo 2026 (oggi):
+31 marzo 2026:
 - Brancaglion = carrello dei materiali
 - Gravina = creazione di contenuti su github
 - Labate = creazione della wiki su github
 
-21 aprile 2026
+21 aprile 2026:
 -Brancaglion = ricerca componenti
 -Gravina = ASSENTE
 -Labate = aggiornamento journal e edit della pagina
