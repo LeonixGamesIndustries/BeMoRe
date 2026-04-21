@@ -53,6 +53,11 @@ A humanoid bot capable of moving like a human being, using articulations to crea
 - Gravina = creazione di contenuti su github
 - Labate = creazione della wiki su github
 
+21 aprile 2026
+-Brancaglion = ricerca componenti
+-Gravina = ASSENTE
+-Labate = aggiornamento journal e edit della pagina
+
 # Pictures
 ![download](https://github.com/user-attachments/assets/0ffa9837-6524-417a-9e13-68fe90448339)
 ![download](https://github.com/user-attachments/assets/d14bdaa8-079c-4c54-9fbf-bd0997de130e)
