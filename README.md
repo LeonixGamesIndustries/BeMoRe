@@ -56,7 +56,7 @@ A humanoid bot capable of moving like a human being, using articulations to crea
 21 aprile 2026:
 - Brancaglion = ricerca componenti
 - Gravina = ASSENTE
-- Labate = aggiornamento journal e edit della pagina
+- Labate = aggiornamento journal,edit della pagina e creazione pagina GoFundMe per supportare il progetto
 
 # Pictures
 - ![download](https://github.com/user-attachments/assets/0ffa9837-6524-417a-9e13-68fe90448339)
