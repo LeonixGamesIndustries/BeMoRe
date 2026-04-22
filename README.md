@@ -24,15 +24,15 @@ A humanoid bot capable of moving like a human being, using articulations to crea
 
 |-------------------|-------------------|-------------------|-------------------|-------------------|-------------------|-------------------|-------------------|
 
-10 Mar --> inizio idea progetto 
-17 Mar --> inizio codice
-24 Mar --> sviluppo del codice
-31 Mar --> sviluppo del codice
-7 Apr  --> revisione del codice e correzione bug
-14 Apr --> revisione del codice e correzione bug
-21 Apr --> acquisto materiali
-28 Apr --> arrivo materiale e inizio assemblaggio
-05 Mag --> inizio test del progetto fisico
+10 Mar --> inizio idea progetto;
+17 Mar --> inizio codice;
+24 Mar --> sviluppo del codice;
+31 Mar --> sviluppo del codice;
+7 Apr  --> revisione del codice e correzione bug;
+14 Apr --> revisione del codice e correzione bug;
+21 Apr --> acquisto materiali;
+28 Apr --> arrivo materiale e inizio assemblaggio;
+05 Mag --> inizio test del progetto fisico;
 
 # Journal
 
