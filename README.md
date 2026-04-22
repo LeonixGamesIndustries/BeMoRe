@@ -24,7 +24,15 @@ A humanoid bot capable of moving like a human being, using articulations to crea
 
 |-------------------|-------------------|-------------------|-------------------|-------------------|-------------------|-------------------|-------------------|
 
-                                                                                                                       arrivo materiale e inizio assemblaggio
+10 Mar --> inizio idea progetto 
+17 Mar --> inizio codice
+24 Mar --> sviluppo del codice
+31 Mar --> sviluppo del codice
+7 Apr  --> revisione del codice e correzione bug
+14 Apr --> revisione del codice e correzione bug
+21 Apr --> acquisto materiali
+28 Apr --> arrivo materiale e inizio assemblaggio
+05 Mag --> inizio test del progetto fisico
 
 # Journal
 
@@ -49,12 +57,22 @@ A humanoid bot capable of moving like a human being, using articulations to crea
 - Labate = ricerca ed inserimento delle immagini su github 
 
 31 marzo 2026:
-- Brancaglion = carrello dei materiali
+- Brancaglion = ricerca componenti
 - Gravina = creazione di contenuti su github
 - Labate = creazione della wiki su github
 
-21 aprile 2026:
+7 aprile 2026:
 - Brancaglion = ricerca componenti
+- Gravina = ASSENTE
+- Labate = aggiornamento journal,edit della pagina e creazione pagina GoFundMe per supportare il progetto
+
+14 aprile 2026:
+- Brancaglion = ricerca componenti
+- Gravina = ASSENTE
+- Labate = aggiornamento journal,edit della pagina e creazione pagina GoFundMe per supportare il progetto
+
+21 aprile 2026:
+- Brancaglion = carrello dei materiali
 - Gravina = ASSENTE
 - Labate = aggiornamento journal,edit della pagina e creazione pagina GoFundMe per supportare il progetto
 
