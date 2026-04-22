@@ -24,7 +24,7 @@ A humanoid bot capable of moving like a human being, using articulations to crea
 
 |-------------------|-------------------|-------------------|-------------------|-------------------|-------------------|-------------------|-------------------|
 
-                  
+                                                                                                                       arrivo materiale e inizio assemblaggio
 
 # Journal
 
