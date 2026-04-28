@@ -1,38 +1,37 @@
 # BeMoRe [ •`-´• ]
-A humanoid bot capable of moving like a human being, using articulations to create the movement
+A humanoid bot capable of moving like a human being, using articulations to create movement
 
 
 # Needed
 
-1. 20 Servos (180/260gr.)
-2. 70 m-f jumper cables (140gr)
-3. 1 esp-32 (or Arduino Giga R1) --> will use esp-32 (cheaper) (25gr)
-4. 15 metal plates, with holes for screws (750gr)
-5. 2 curved metal plates (200gr)
-6. 1 driver servo pwm (10gr)
-7. 1 battery-pack (40gr)
+1. 10 Servos Feetech sts 30kg/cm 360°
+2. 1 driver servo waveshare with an embedded esp-32
+3. 8 imuto lithium AA batteries 3000 mA 1.5V
+4. 1 battery-pack (40gr)
+5. 1 ps5 dualsense controller
 
 # Time schedule
 
-1. 2 weeks for completing the legs
-2. 2-3 weeks for completing arms
-3. 1 week to make it simulate his shutdown
+1. 3 weeks --> searching materials
+2. 2 weeks --> software developement
+3. 1 day --> assembly
+4. future --> software upgrades and implementing arms (not possible due to costs)
 
 # Milestones
 
-10 Mar --------- 17 Mar ---------- 24 Mar ----------- 31 Mar ----------- 7 Apr --------- 14 Apr --------- 21 Apr --------- 28 Apr --------- 05 Mag
+10 Mar ---------- 17 Mar ---------- 24 Mar ----------- 31 Mar ----------- 7 Apr ---------- 14 Apr --------- 21 Apr --------- 28 Apr --------- 05 Mag
 
 |-------------------|-------------------|-------------------|-------------------|-------------------|-------------------|-------------------|-------------------|
 
-10 Mar --> inizio idea progetto; 
-17 Mar --> inizio codice; 
-24 Mar --> sviluppo del codice; 
-31 Mar --> sviluppo del codice; 
-7 Apr  --> revisione del codice e correzione bug; 
-14 Apr --> revisione del codice e correzione bug; 
-21 Apr --> acquisto materiali; 
-28 Apr --> arrivo materiale e inizio assemblaggio; 
-05 Mag --> inizio test del progetto fisico; 
+- 10 Mar --> inizio idea progetto; 
+- 17 Mar --> inizio codice; 
+- 24 Mar --> ricerca materiali; 
+- 31 Mar --> ricerca materiali; 
+- 7 Apr  --> ricerca materiali; 
+- 14 Apr --> ricerca materiali; 
+- 21 Apr --> acquisto materiali, scrittura del codice definitivo; 
+- 28 Apr --> arrivo materiale e inizio assemblaggio; 
+- 05 Mag --> inizio test del progetto fisico, eventuale bug fixing del codice, implementazione e test del software AI di @aleex616; 
 
 # Journal
 
