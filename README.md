@@ -80,7 +80,7 @@ A humanoid bot capable of moving like a human being, using articulations to crea
 - Labate = aggiornamento journal,edit della pagina
 
 05 maggio 2026:
-- Brancaglion = sviluppo e ultimazione del codice
+- Brancaglion = sviluppo e ultimazione del codice e approfondimento materiale acquistqato
 - Gravina = aggiornamento journal,edit della pagina 
 - Labate = aggiornamento journal,edit della pagina
 # Pictures
