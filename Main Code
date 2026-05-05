@@ -1,214 +1,115 @@
-#include <Servo.h>
 
-#define JOY_X A0
-#define JOY_Y A1
+#include <SCServo.h>
+#include <PS5Controller.h>
 
-Servo hip1_right, hip2_right, knee_right, ankle_right;
-Servo hip1_left, hip2_left, knee_left, ankle_left;
-Servo weight_x, weight_z;
+SMS_STS sts;
 
-float currentRotation = 90;
-float deadZone = 0.15;
+int hip1_right;
+int hip2_right;
+int knee_right;
+int ankle1_right;
+int ankle2_right;
 
-unsigned long lastStepTime = 0;
-unsigned long stateChangeTime = 0;
+int hip1_left;
+int hip2_left;
+int knee_left;
+int ankle1_left;
+int ankle2_left;
 
-bool stepSide = false;
+int rotation;
+int rX = 0;
+int rY = 1;
 
-enum RobotState {
-  IDLE,
-  WALK,
-  DRIFT,
-  CHAOS
-};
+bool isMoving = false;
 
-RobotState state = IDLE;
+void setup() 
+{
+  PS5.begin();
 
-float chaosSeed = 0.0;
-
-void setup() {
-  randomSeed(analogRead(A5));
-
-  hip1_right.attach(2);
-  hip2_right.attach(3);
-  knee_right.attach(4);
-  ankle_right.attach(5);
-
-  hip1_left.attach(6);
-  hip2_left.attach(7);
-  knee_left.attach(8);
-  ankle_left.attach(9);
-
-  weight_x.attach(10);
-  weight_z.attach(11);
-
-  SetNeutralPosition();
+  resetServoPos();
 }
 
-void loop() {
-  float x = ReadAxis(JOY_X);
-  float y = ReadAxis(JOY_Y);
+void loop() 
+{
+  if (PS5.isConnected() && !isMoving)
+  {
+    if (PS5.Up()) forward();
 
-  float magnitude = sqrt(x * x + y * y);
+    else if (PS5.Left()) left();
 
-  UpdateState(magnitude);
+    else if (PS5.Right()) right();
 
-  switch (state) {
-    case IDLE:
-      IdleBehavior();
-      break;
-
-    case WALK:
-      Step(x, y);
-      break;
-
-    case DRIFT:
-      DriftMovement(x, y);
-      break;
-
-    case CHAOS:
-      ChaosMovement();
-      break;
+    else if (PS5.Back()) back();
   }
 }
 
-float ReadAxis(int pin) {
-  int raw = analogRead(pin);
-  return (raw - 512.0) / 512.0;
+// servo base functions
+
+void setServo(int id, int pos)
+{
+  sts.WritePosEx(id, pos, 400, 50);
+  delay(1000);
 }
 
-void UpdateState(float magnitude) {
-  if (millis() - stateChangeTime > 3000) {
-    int r = random(0, 100);
-
-    if (magnitude < deadZone) {
-      state = IDLE;
-    } else if (r < 50) {
-      state = WALK;
-    } else if (r < 80) {
-      state = DRIFT;
-    } else {
-      state = CHAOS;
-    }
-
-    stateChangeTime = millis();
+void resetServoPos()
+{
+  for (int i = 1; i <= 10; i++)
+  {
+    setServo(i, 2048);
   }
 }
 
-void Step(float x, float y) {
-  float angle = atan2(x, y) * 180.0 / PI;
-  if (angle < 0) angle += 360;
+// movement functions
 
-  float servoTarget = map(angle, 0, 360, 45, 135);
+void step()
+{
 
-  float delta = servoTarget - currentRotation;
-  float stepTurn = constrain(delta, -10, 10);
-
-  currentRotation += stepTurn;
-  currentRotation = constrain(currentRotation, 45, 135);
-
-  if (random(0, 100) > 50)
-    stepSide = !stepSide;
-
-  if (!stepSide)
-    StepLeft();
-  else
-    StepRight();
 }
 
-void DriftMovement(float x, float y) {
-  float drift = sin(millis() * 0.002) * 20;
-
-  currentRotation = 90 + drift;
-
-  weight_x.write(90 + drift);
-  weight_z.write(90 + cos(millis() * 0.003) * 20);
-
-  if (millis() - lastStepTime > 400) {
-    if (stepSide)
-      StepLeft();
-    else
-      StepRight();
-
-    stepSide = !stepSide;
-    lastStepTime = millis();
-  }
+void forward()
+{
+  isMoving = true;
+  rotateTo(0, 1);
+  step();
+  isMoving = false;
 }
 
-void ChaosMovement() {
-  chaosSeed += 0.1;
-
-  float noise = sin(chaosSeed) * 45;
-
-  hip1_left.write(90 + noise);
-  hip1_right.write(90 - noise);
-
-  knee_left.write(90 + sin(chaosSeed * 2) * 30);
-  knee_right.write(90 + cos(chaosSeed * 2) * 30);
-
-  weight_x.write(90 + sin(chaosSeed * 1.5) * 40);
-  weight_z.write(90 + cos(chaosSeed * 1.3) * 40);
-
-  delay(random(50, 200));
+void left()
+{
+  isMoving = true;
+  rotateTo(-1, 0);
+  step();
+  isMoving = false;
 }
 
-void IdleBehavior() {
-  float micro = sin(millis() * 0.001) * 5;
-
-  hip1_left.write(90 + micro);
-  hip1_right.write(90 - micro);
-
-  knee_left.write(90 + micro);
-  knee_right.write(90 - micro);
-
-  weight_z.write(90 + sin(millis() * 0.002) * 10);
+void right()
+{
+  isMoving = true;
+  rotateTo(1, 0);
+  step();
+  isMoving = false;
 }
 
-void StepLeft() {
-  weight_x.write(120 + random(-5, 5));
-  delay(random(100, 250));
-
-  knee_left.write(60);
-  delay(random(100, 250));
-
-  hip1_left.write(currentRotation + random(-5, 5));
-  delay(random(100, 250));
-
-  knee_left.write(90);
-  delay(random(100, 250));
-
-  weight_x.write(90);
+void back()
+{
+  isMoving = true;
+  rotateTo(0, -1);
+  step();
+  isMoving = false;
 }
 
-void StepRight() {
-  weight_x.write(60 + random(-5, 5));
-  delay(random(100, 250));
+// rotation function
 
-  knee_right.write(60);
-  delay(random(100, 250));
+void rotateTo(int x, int y)
+{
+  if (rX == x && rY == y)
+    return;
 
-  hip1_right.write(currentRotation + random(-5, 5));
-  delay(random(100, 250));
+  rX = x; rY = y;
 
-  knee_right.write(90);
-  delay(random(100, 250));
+  rotation = 2048;
 
-  weight_x.write(90);
-}
-
-void SetNeutralPosition() {
-  hip1_right.write(90);
-  hip2_right.write(90);
-  knee_right.write(90);
-  ankle_right.write(90);
-
-  hip1_left.write(90);
-  hip2_left.write(90);
-  knee_left.write(90);
-  ankle_left.write(90);
-
-  weight_x.write(90);
-  weight_z.write(90);
-
-  currentRotation = 90;
+  if(y == -1) rotation = 0;
+  else if (x == 1) rotation += rotation / 2;
+  else if (x == -1) rotation -= rotation / 2;
 }
