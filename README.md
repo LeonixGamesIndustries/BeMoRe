@@ -32,7 +32,6 @@ A humanoid bot capable of moving like a human being, using articulations to crea
 - 21 Apr --> acquisto materiali, scrittura del codice definitivo; 
 - 28 Apr --> arrivo materiale e inizio assemblaggio; 
 - 05 Mag --> inizio test del progetto fisico, eventuale bug fixing del codice, implementazione e test del software AI di @aleex616; 
-
 # Journal
 
 3 marzo 2026:
