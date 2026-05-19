@@ -1,3 +1,4 @@
+
 # BeMOre [ •`-´• ]
 A humanoid bot capable of moving like a human being, using articulations to create movement
 
@@ -99,4 +100,5 @@ A humanoid bot capable of moving like a human being, using articulations to crea
 - ![download](https://github.com/user-attachments/assets/0ffa9837-6524-417a-9e13-68fe90448339)
 - ![shopping](https://github.com/user-attachments/assets/2d08f836-a62b-4b86-bd12-50296e928dc7)
 - <img width="232" height="264" alt="shopping" src="https://github.com/user-attachments/assets/728ecd6f-26c3-4986-8f64-ba10285ace0a" />
+- <img width="259" height="194" alt="download" src="https://github.com/user-attachments/assets/221e2790-9b2d-45fe-8593-f3fdd6821578" />
 
