@@ -103,4 +103,4 @@ A humanoid bot capable of moving like a human being, using articulations to crea
 - <img width="259" height="194" alt="download" src="https://github.com/user-attachments/assets/221e2790-9b2d-45fe-8593-f3fdd6821578" />
 - <img width="259" height="194" alt="download1" src="https://github.com/user-attachments/assets/d9d20c59-3efb-4599-a6de-7038fcac901a" />
 - <img width="259" height="194" alt="bartteries" src="https://github.com/user-attachments/assets/ec565b7f-19b2-4f74-aded-6ed9ef046365" />
-
+- <img width="259" height="194" alt="ps5controller" src="https://github.com/user-attachments/assets/f029d532-61b1-46c5-bde7-acd8cf5e0f84" />
