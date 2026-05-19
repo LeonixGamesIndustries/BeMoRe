@@ -1,0 +1,36 @@
+#include <SCServo.h>
+
+SMS_STS sts;
+
+void setup() {
+  Serial.begin(115200);
+
+  Serial1.begin(1000000, SERIAL_8N1, 18, 19);
+  sts.pSerial = &Serial1;
+
+  delay(1000);
+
+  int oldID = 6;
+  int newID = 5;
+
+  Serial.println("Changing servo ID...");
+
+  // sblocca EEPROM
+  sts.unLockEprom(oldID);
+  delay(100);
+
+  // registro ID = 5
+  sts.writeByte(oldID, 5, newID);
+  delay(100);
+
+  // riblocca EEPROM
+  sts.LockEprom(newID);
+  delay(100);
+
+  Serial.println("Done!");
+  Serial.print("New ID: ");
+  Serial.println(newID);
+}
+
+void loop() {
+}
