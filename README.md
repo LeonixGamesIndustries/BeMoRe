@@ -101,5 +101,5 @@ A humanoid bot capable of moving like a human being, using articulations to crea
 - ![shopping](https://github.com/user-attachments/assets/2d08f836-a62b-4b86-bd12-50296e928dc7)
 - <img width="232" height="264" alt="shopping" src="https://github.com/user-attachments/assets/728ecd6f-26c3-4986-8f64-ba10285ace0a" />
 - <img width="259" height="194" alt="download" src="https://github.com/user-attachments/assets/221e2790-9b2d-45fe-8593-f3fdd6821578" />
-- <img width="148" height="93" alt="download1" src="https://github.com/user-attachments/assets/d9d20c59-3efb-4599-a6de-7038fcac901a" />
+- <img width="259" height="194" alt="download1" src="https://github.com/user-attachments/assets/d9d20c59-3efb-4599-a6de-7038fcac901a" />
 
