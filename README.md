@@ -19,10 +19,6 @@ A humanoid bot capable of moving like a human being, using articulations to crea
 
 # Milestones
 
-10 Mar ---------- 17 Mar ---------- 24 Mar ----------- 31 Mar ----------- 7 Apr ---------- 14 Apr --------- 21 Apr --------- 28 Apr --------- 05 Mag
-
-|-------------------|-------------------|-------------------|-------------------|-------------------|-------------------|-------------------|-------------------|
-
 - 10 Mar --> inizio idea progetto; 
 - 17 Mar --> inizio codice; 
 - 24 Mar --> ricerca materiali; 
@@ -31,7 +27,10 @@ A humanoid bot capable of moving like a human being, using articulations to crea
 - 14 Apr --> ricerca materiali; 
 - 21 Apr --> acquisto materiali, scrittura del codice definitivo; 
 - 28 Apr --> arrivo materiale e inizio assemblaggio; 
-- 05 Mag --> inizio test del progetto fisico, eventuale bug fixing del codice, implementazione e test del software AI di @aleex616; 
+- 05 Mag --> fine assemblaggio; 
+- 12 Mag --> inizio test del progetto fisico, eventuale bug fixing del codice
+- 19 Mag --> perfezionamento del codice e consegna al docente
+
 # Journal
 
 3 marzo 2026:
@@ -61,28 +60,38 @@ A humanoid bot capable of moving like a human being, using articulations to crea
 
 7 aprile 2026:
 - Brancaglion = ricerca componenti
-- Gravina = ASSENTE
-- Labate = aggiornamento journal,edit della pagina
+- Gravina = aggiornamento journal, edit della pagina 
+- Labate = aggiornamento journal, edit della pagina
 
 14 aprile 2026:
 - Brancaglion = ricerca componenti
 - Gravina = ASSENTE
-- Labate = aggiornamento journal,edit della pagina
+- Labate = aggiornamento journal, edit della pagina
 
 21 aprile 2026:
 - Brancaglion = carrello dei materiali
-- Gravina = ASSENTE
-- Labate = aggiornamento journal,edit della pagina e creazione pagina GoFundMe per supportare il progetto
+- Gravina = aggiornamento journal, edit della pagina 
+- Labate = aggiornamento journal, edit della pagina e creazione pagina GoFundMe per supportare il progetto
 
 28 aprile 2026:
 - Brancaglion = sviluppo e ultimazione del codice
-- Gravina = aggiornamento journal,edit della pagina 
-- Labate = aggiornamento journal,edit della pagina
+- Gravina = aggiornamento journal, edit della pagina 
+- Labate = aggiornamento journal, edit della pagina
 
 05 maggio 2026:
-- Brancaglion = sviluppo e ultimazione del codice e approfondimento materiale acquistqato
-- Gravina = aggiornamento journal,edit della pagina 
-- Labate = aggiornamento journal,edit della pagina
+- Brancaglion = sviluppo e ultimazione del codice e approfondimento materiale acquistato
+- Gravina = aggiornamento journal, edit della pagina 
+- Labate = aggiornamento journal, edit della pagina
+
+12 maggio 2026:
+- Brancaglion = sviluppo e ultimazione del codice e approfondimento materiale acquistato
+- Gravina = aggiornamento journal, edit della pagina 
+- Labate = aggiornamento journal, edit della pagina
+
+19 maggio 2026:
+- Brancaglion = perfezionamento del codice e test sul progetto fisico
+- Gravina = aggiornamento journal, edit della pagina 
+- Labate = ASSENTE
 # Pictures
 - ![download](https://github.com/user-attachments/assets/0ffa9837-6524-417a-9e13-68fe90448339)
 - ![download](https://github.com/user-attachments/assets/d14bdaa8-079c-4c54-9fbf-bd0997de130e)
