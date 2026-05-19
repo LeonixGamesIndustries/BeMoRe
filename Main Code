@@ -1,20 +1,26 @@
 
+#include <ps5Controller.h>
 #include <SCServo.h>
-#include <PS5Controller.h>
 
 SMS_STS sts;
 
-int hip1_right;
-int hip2_right;
-int knee_right;
-int ankle1_right;
-int ankle2_right;
+bool wasConnected = false;
 
-int hip1_left;
-int hip2_left;
-int knee_left;
-int ankle1_left;
-int ankle2_left;
+int servoBasePos[6] = {3072, 1950, 3050, 3050, 2075, 3175};
+
+int lastLegUsed = 0;
+
+int hip_dx = 1;
+int hip_sx = 4;
+
+int knee_dx = 2;
+int knee_sx = 5;
+
+int ankle_dx = 3;
+int ankle_sx = 6;
+
+int posY = 2048;
+int posX = 2048;
 
 int rotation;
 int rX = 0;
@@ -22,40 +28,52 @@ int rY = 1;
 
 bool isMoving = false;
 
-void setup() 
-{
-  PS5.begin();
+String debug = "";
+
+void setup() {
+  Serial.begin(115200);
+
+  Serial1.begin(1000000, SERIAL_8N1, 18, 19);
+  sts.pSerial = &Serial1;
+
+  ps5.begin("24:a6:fa:30:33:a5");
+  
+  Serial.println("online");
+  Serial.println("connect PS5 controller");
 
   resetServoPos();
 }
 
-void loop() 
-{
-  if (PS5.isConnected() && !isMoving)
+void loop() {
+  debug = Serial.readString();
+  debug.trim();
+
+  if (!ps5.isConnected()) 
   {
-    if (PS5.Up()) forward();
-
-    else if (PS5.Left()) left();
-
-    else if (PS5.Right()) right();
-
-    else if (PS5.Back()) back();
+    if (wasConnected) Serial.println("reconnect PS5 controller");
+    wasConnected = false;
+    delay(10);
   }
-}
 
-// servo base functions
+  wasConnected = true;
+
+  if ((ps5.Up() || debug == "w") && !isMoving) forward();
+  if ((ps5.Down() || debug == "s") && !isMoving) back();
+
+  if ((ps5.Right() || debug == "d") && !isMoving) right();
+  if ((ps5.Left() || debug == "a") && !isMoving) left();
+}
 
 void setServo(int id, int pos)
 {
   sts.WritePosEx(id, pos, 400, 50);
-  delay(1000);
 }
 
 void resetServoPos()
 {
-  for (int i = 1; i <= 10; i++)
+  for(int i = 1; i <= 6; i++)
   {
-    setServo(i, 2048);
+    setServo(i, servoBasePos[i - 1]);
   }
 }
 
@@ -63,13 +81,49 @@ void resetServoPos()
 
 void step()
 {
+  if (lastLegUsed == 0)
+  {
+    setServo(knee_sx, servoBasePos[knee_sx - 1] + 200);
+    setServo(knee_dx, servoBasePos[knee_dx - 1] + 200);
 
+    setServo(ankle_dx, servoBasePos[ankle_dx - 1] - 200);
+    setServo(ankle_sx, servoBasePos[ankle_sx - 1] - 200);
+
+    delay(1000);
+
+    setServo(knee_dx, servoBasePos[knee_dx - 1]);
+    setServo(knee_sx, servoBasePos[knee_sx - 1]);
+
+    setServo(ankle_sx, servoBasePos[ankle_sx - 1]);
+    setServo(ankle_dx, servoBasePos[ankle_dx - 1]);
+
+    lastLegUsed = 1;
+  }
+  else
+  {
+    setServo(knee_dx, servoBasePos[knee_dx - 1] - 200);
+    setServo(knee_sx, servoBasePos[knee_sx - 1] - 200);
+
+    setServo(ankle_sx, servoBasePos[ankle_sx - 1] + 200);
+    setServo(ankle_dx, servoBasePos[ankle_dx - 1] + 200);
+
+    delay(1000);
+
+    setServo(ankle_dx, servoBasePos[ankle_dx - 1]);
+    setServo(ankle_sx, servoBasePos[ankle_sx - 1]);
+
+    setServo(knee_sx, servoBasePos[knee_sx - 1]);
+    setServo(knee_dx, servoBasePos[knee_dx - 1]);
+
+    lastLegUsed = 0;
+  }
 }
 
 void forward()
 {
   isMoving = true;
   rotateTo(0, 1);
+  delay(1000);
   step();
   isMoving = false;
 }
@@ -78,6 +132,7 @@ void left()
 {
   isMoving = true;
   rotateTo(-1, 0);
+  delay(1000);
   step();
   isMoving = false;
 }
@@ -86,6 +141,7 @@ void right()
 {
   isMoving = true;
   rotateTo(1, 0);
+  delay(1000);
   step();
   isMoving = false;
 }
@@ -94,6 +150,7 @@ void back()
 {
   isMoving = true;
   rotateTo(0, -1);
+  delay(1000);
   step();
   isMoving = false;
 }
@@ -102,14 +159,33 @@ void back()
 
 void rotateTo(int x, int y)
 {
-  if (rX == x && rY == y)
-    return;
+  if (rX == x && rY == y) return;
 
-  rX = x; rY = y;
+  rX = x;
+  rY = y;
 
-  rotation = 2048;
+  setServo(knee_sx, 3072);
 
-  if(y == -1) rotation = 0;
-  else if (x == 1) rotation += rotation / 2;
-  else if (x == -1) rotation -= rotation / 2;
+  rotation = 4095;
+
+  if (y == -1) rotation = 1024;
+  else if (y == 1) rotation = 3072;
+  else if (x == 1) rotation = 2048;
+
+  setServo(knee_sx, servoBasePos[knee_sx - 1] - 50);
+
+  delay(500);
+
+  setServo(hip_dx, rotation);
+
+  delay(2600);
+
+  setServo(knee_sx, servoBasePos[knee_sx - 1]);
+  setServo(hip_dx, servoBasePos[hip_dx - 1]);
+
+  delay(500);
+
+  // until servo aren't delivered
+  rX = 0;
+  rY = 1;
 }
