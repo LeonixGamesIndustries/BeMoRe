@@ -4,18 +4,21 @@ A humanoid bot capable of moving like a human being, using articulations to crea
 
 # Needed
 
-1. 10 Servos Feetech sts 30kg/cm 360°
-2. 1 driver servo waveshare with an embedded esp-32
-3. 8 imuto lithium AA batteries 3000 mA 1.5V
-4. 1 battery-pack (40gr)
-5. 1 ps5 dualsense controller
+1. 6 Servos Feetech sts 3215 30kg/cm 360°
+2. 19 iron bars and angolar bars 
+3. 1 driver servo waveshare with an embedded esp-32
+4. 8 imuto lithium AA batteries 3000 mA 1.5V
+5. 1 battery-pack
+6. 1 ps5 dualsense controller
+7. screws as needed
 
 # Time schedule
 
 1. 3 weeks --> searching materials
-2. 2 weeks --> software developement
-3. 1 day --> assembly
-4. future --> software upgrades and implementing arms (not possible due to costs)
+2. 4-5 days --> understanding drivers
+3. 2 weeks --> software developement
+4. 2 days --> assembly
+5. future --> software upgrades and implementing arms (not possible due to costs)
 
 # Milestones
 
