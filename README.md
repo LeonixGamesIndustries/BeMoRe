@@ -11,7 +11,7 @@ A humanoid bot capable of moving like a human being, using articulations to crea
 4. 8 imuto lithium AA batteries 3000 mA 1.5V
 5. 1 battery-pack
 6. 1 ps5 dualsense controller
-7. screws as needed
+7. screws, as needed
 
 # Time schedule
 
