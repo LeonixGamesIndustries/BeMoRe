@@ -1,14 +1,16 @@
 
-#include <ps5Controller.h>
-#include <SCServo.h>
+#include <ps5Controller.h>  // PS5 library, to connect to controller
+#include <SCServo.h>        // UART communicating servo library
 
-SMS_STS sts;
+SMS_STS sts;                // creates an instance of SMS_STS class --> from SCServo
 
-bool wasConnected = false;
+bool wasConnected = false;  // previous connection of controller, for debug
 
-int servoBasePos[6] = {3072, 1950, 3050, 3050, 2075, 3175};
+int servoBasePos[6] = {3072, 1950, 3050, 3050, 2075, 3175};  // array of servo center positions
 
-int lastLegUsed = 0;
+int lastLegUsed = 0;  // 0 = rightLeg, 1 = leftLeg
+
+// servo IDs
 
 int hip_dx = 1;
 int hip_sx = 4;
@@ -22,26 +24,30 @@ int ankle_sx = 6;
 int posY = 2048;
 int posX = 2048;
 
+// robot current rotation variables
+
 int rotation;
 int rX = 0;
 int rY = 1;
 
-bool isMoving = false;
+bool isMoving = false; // moving flag
 
-String debug = "";
+String debug = "";     // string used for Serial communication (debug only)
 
 void setup() {
   Serial.begin(115200);
 
-  Serial1.begin(1000000, SERIAL_8N1, 18, 19);
-  sts.pSerial = &Serial1;
+  // UART communication Setup
 
-  ps5.begin("24:a6:fa:30:33:a5");
+  Serial1.begin(1000000, SERIAL_8N1, 18, 19);
+  sts.pSerial = &Serial1;                      
+
+  ps5.begin("24:a6:fa:30:33:a5"); // controller MAC address, change with own
   
   Serial.println("online");
   Serial.println("connect PS5 controller");
 
-  resetServoPos();
+  resetServoPos();  // force servo reset to central position
 }
 
 void loop() {
@@ -66,7 +72,7 @@ void loop() {
 
 void setServo(int id, int pos)
 {
-  sts.WritePosEx(id, pos, 400, 50);
+  sts.WritePosEx(id, pos, 400, 50); // function to set servo to position (id, position, speed, accelleration)
 }
 
 void resetServoPos()
