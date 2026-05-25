@@ -15,15 +15,15 @@ void setup() {
 
   Serial.println("Changing servo ID...");
 
-  // sblocca EEPROM
+  // unlocks EEPROM
   sts.unLockEprom(oldID);
   delay(100);
 
-  // registro ID = 5
+  // register ID = newID
   sts.writeByte(oldID, 5, newID);
   delay(100);
 
-  // riblocca EEPROM
+  // locks EEPROM
   sts.LockEprom(newID);
   delay(100);
 
